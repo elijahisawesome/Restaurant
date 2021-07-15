@@ -18,9 +18,9 @@ const TaskBar = (function(){
         return newDiv;
     }
 
+    //Construction of the task bar
     let taskBar = document.createElement('div');
     taskBar.id = "TaskBar";
-    //append a bunch of shit to the taskBar then return it.
     const menuDiv = divFactory("menuScreen");
     const contactDiv = divFactory("contactScreen");
     const homeDiv = divFactory("homeScreen");

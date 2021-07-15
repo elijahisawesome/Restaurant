@@ -3,6 +3,7 @@ const MenuScreen = (function(){
         return screen;
     }
 
+    //construction of the Menu screen
     const screen = document.createElement('div');
     screen.innerText = "I'M FUCKIN MENUIN HERE!";
 

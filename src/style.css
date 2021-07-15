@@ -15,3 +15,36 @@ body{
     padding-left: 50%;
     margin-left: -114px;
 }
+
+img#left{
+    float:left;
+}
+
+img#right{
+    float:right;
+}
+
+.bodyDiv{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    text-align: center;
+    height: auto;
+    padding: 15px;
+    width: 400px;
+    background: orangered;
+}
+.subBodyDiv{
+    border:aquamarine;
+    border-style: solid;
+}
+
+.subBodyDiv::after{
+    content: '';
+    background: maroon;
+    display: block;
+    height: 10px;
+    width: auto;
+}

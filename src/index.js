@@ -1,4 +1,4 @@
-import mainImage from './Tom\'s_Restaurant,_Manhattan.jpg';
+import bootLogo from './Drawing.png';
 import './style.css';
 import {TaskBar as taskBar} from './taskBar.js';
 import {HomeScreen as homeScreen} from './home.js';
@@ -11,10 +11,24 @@ let screens = {homeScreen:homeScreen.getScreen(), menuScreen:menuScreen.getScree
 
 
 const Main = (function(){
+    const imageAppender = function() {
+        const leftImg = new Image();
+        const rightImg = new Image();
+        leftImg.src = bootLogo;
+        rightImg.src = bootLogo;
+        leftImg.id = 'left';
+        rightImg.id = 'right';
+        
+        mainDiv.append(leftImg, rightImg);
+
+        
+    }
+
     const mainDiv = document.getElementById('content');
     mainDiv.appendChild(taskBar.returnsTaskBar());
-    taskBar.swapScreen(mainDiv, screens.homeScreen);
+    imageAppender();
 
+    taskBar.swapScreen(mainDiv, screens.homeScreen);
     let currentScreen = screens.homeScreen;
     let prevScreen;
 
@@ -27,4 +41,5 @@ const Main = (function(){
             taskBar.swapScreen(mainDiv,currentScreen,prevScreen);
         });
     });
+
 })();
