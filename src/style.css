@@ -1,0 +1,17 @@
+body{
+    /*background: url( "./Tom\'s_Restaurant,_Manhattan.jpg");*/
+}
+#content{
+   
+}
+.navButton{
+    background: aquamarine;
+    margin: auto;
+}
+#TaskBar{
+    display: grid;
+    margin: auto;
+    grid-template-columns: 76px 76px 76px;
+    padding-left: 50%;
+    margin-left: -114px;
+}
