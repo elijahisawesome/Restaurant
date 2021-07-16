@@ -20,8 +20,6 @@ const Main = (function(){
         rightImg.id = 'right';
         
         mainDiv.append(leftImg, rightImg);
-
-        
     }
 
     const mainDiv = document.getElementById('content');

@@ -15,7 +15,14 @@ const TaskBar = (function(){
         newDiv.id = name;
         newDiv.classList.add('navButton');
         newDiv.innerText = name.slice(0,-6);
+        newDiv.append(chevronSpan(name))
         return newDiv;
+    }
+    const chevronSpan = function(name){
+        let newSpan = document.createElement('span');
+        newSpan.id = name;
+        newSpan.classList.add('chevronSpan');
+        return newSpan
     }
 
     //Construction of the task bar

@@ -7,6 +7,23 @@ body{
 .navButton{
     background: aquamarine;
     margin: auto;
+    cursor: pointer;
+    transition: all 0.25s;
+
+}
+
+.navButton:hover .chevronSpan::before{
+    transform: rotate(90deg);
+}
+
+.chevronSpan::before{
+    display:inline-block;
+    text-align: center;
+    vertical-align: middle;
+    content:'\00bb';
+    box-sizing: inherit;
+    transition: all .15s;
+
 }
 #TaskBar{
     display: grid;
