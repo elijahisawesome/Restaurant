@@ -2,7 +2,7 @@ body{
     /*background: url( "./Tom\'s_Restaurant,_Manhattan.jpg");*/
 }
 #content{
-   
+   height: auto;
 }
 .navButton{
     background: aquamarine;
@@ -25,7 +25,7 @@ img#right{
 }
 
 .bodyDiv{
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     margin-left: -200px;
@@ -40,11 +40,7 @@ img#right{
     border:aquamarine;
     border-style: solid;
 }
-
-.subBodyDiv::after{
-    content: '';
-    background: maroon;
-    display: block;
-    height: 10px;
-    width: auto;
+.imageCenter{
+    margin-left: auto;
+    margin-right: auto;
 }

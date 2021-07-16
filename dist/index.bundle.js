@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body{\\n    /*background: url( \\\"./Tom\\\\'s_Restaurant,_Manhattan.jpg\\\");*/\\n}\\n#content{\\n   \\n}\\n.navButton{\\n    background: aquamarine;\\n    margin: auto;\\n}\\n#TaskBar{\\n    display: grid;\\n    margin: auto;\\n    grid-template-columns: 76px 76px 76px;\\n    padding-left: 50%;\\n    margin-left: -114px;\\n}\\n\\nimg#left{\\n    float:left;\\n}\\n\\nimg#right{\\n    float:right;\\n}\\n\\n.bodyDiv{\\n    position: fixed;\\n    top: 50%;\\n    left: 50%;\\n    margin-left: -200px;\\n    margin-top: -200px;\\n    text-align: center;\\n    height: auto;\\n    padding: 15px;\\n    width: 400px;\\n    background: orangered;\\n}\\n.subBodyDiv{\\n    border:aquamarine;\\n    border-style: solid;\\n}\\n\\n.subBodyDiv::after{\\n    content: '';\\n    background: maroon;\\n    display: block;\\n    height: 10px;\\n    width: auto;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurant/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"body{\\n    /*background: url( \\\"./Tom\\\\'s_Restaurant,_Manhattan.jpg\\\");*/\\n}\\n#content{\\n   height: auto;\\n}\\n.navButton{\\n    background: aquamarine;\\n    margin: auto;\\n}\\n#TaskBar{\\n    display: grid;\\n    margin: auto;\\n    grid-template-columns: 76px 76px 76px;\\n    padding-left: 50%;\\n    margin-left: -114px;\\n}\\n\\nimg#left{\\n    float:left;\\n}\\n\\nimg#right{\\n    float:right;\\n}\\n\\n.bodyDiv{\\n    position: absolute;\\n    top: 50%;\\n    left: 50%;\\n    margin-left: -200px;\\n    margin-top: -200px;\\n    text-align: center;\\n    height: auto;\\n    padding: 15px;\\n    width: 400px;\\n    background: orangered;\\n}\\n.subBodyDiv{\\n    border:aquamarine;\\n    border-style: solid;\\n}\\n.imageCenter{\\n    margin-left: auto;\\n    margin-right: auto;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://restaurant/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -116,7 +116,37 @@ eval("module.exports = __webpack_require__.p + \"2a4da07b0df26fe99d1c.png\";\n\n
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"ContactScreen\": () => (/* binding */ ContactScreen)\n/* harmony export */ });\nconst ContactScreen = (function(){\n    const getScreen = function(){\n        return screen;\n    }\n\n    //construction of the Contact screen\n    const screen = document.createElement('div');\n    screen.innerText = \"I'M FUCKIN CONTACTIN HERE!\";\n\n    return{getScreen}\n})();\n\n\n\n\n\n//# sourceURL=webpack://restaurant/./src/contact.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"ContactScreen\": () => (/* binding */ ContactScreen)\n/* harmony export */ });\n/* harmony import */ var _contactText_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contactText.js */ \"./src/contactText.js\");\n/* harmony import */ var _contactImages_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contactImages.js */ \"./src/contactImages.js\");\n\n\n\nconst ContactScreen = (function(){\n    const getScreen = function(){\n        return screen;\n    }\n    let newDivs= [];\n\n    const pictureGetter = function(x){\n        let contactPicture = document.createElement('img');\n        contactPicture.src = _contactImages_js__WEBPACK_IMPORTED_MODULE_1__.default[`img${x}`];\n        contactPicture.style.height = '100px';\n        contactPicture.style.width = 'auto';\n        contactPicture.style.display = 'block';\n        contactPicture.classList.add(\"imageCenter\");\n        return contactPicture;\n    }\n    const divCustomizer = function(x){\n        newDivs[x] = document.createElement('div');\n        newDivs[x].id = `paragraph${x}`;\n        newDivs[x].classList.add('subBodyDiv');\n        return newDivs[x];\n    }\n    const pGetter = function(x){\n        const newP = document.createElement('p');\n        newP.innerText = _contactText_js__WEBPACK_IMPORTED_MODULE_0__.contactText[`text${x}`];\n        return newP;\n    }\n    \n\n\n    //construction of the Contact screen\n    const screen = document.createElement('div');\n    screen.classList.add(\"bodyDiv\");\n    for(let x = 0; x<2; x++){\n        newDivs[x] = divCustomizer(x);\n        if(!!_contactImages_js__WEBPACK_IMPORTED_MODULE_1__.default[`img${x}`]){\n            newDivs[x].appendChild(pictureGetter(x));\n        }\n        newDivs[x].appendChild(pGetter(x));\n        screen.appendChild(newDivs[x]);\n    }\n\n    return{getScreen}\n})();\n\n\n\n\n\n//# sourceURL=webpack://restaurant/./src/contact.js?");
+
+/***/ }),
+
+/***/ "./src/contactImages.js":
+/*!******************************!*\
+  !*** ./src/contactImages.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _contactImages_0_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./contactImages/0.jpg */ \"./src/contactImages/0.jpg\");\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({img0: _contactImages_0_jpg__WEBPACK_IMPORTED_MODULE_0__});\n\n//# sourceURL=webpack://restaurant/./src/contactImages.js?");
+
+/***/ }),
+
+/***/ "./src/contactImages/0.jpg":
+/*!*********************************!*\
+  !*** ./src/contactImages/0.jpg ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"720685ea2fd42c387cda.jpg\";\n\n//# sourceURL=webpack://restaurant/./src/contactImages/0.jpg?");
+
+/***/ }),
+
+/***/ "./src/contactText.js":
+/*!****************************!*\
+  !*** ./src/contactText.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"contactText\": () => (/* binding */ contactText)\n/* harmony export */ });\nconst contactText = {\n    text0: 'Located off the turnpike, under the ocean!',\n    text1: 'Our phone number is 111-222-3333. Give us a ring!'\n}\n\n\n//# sourceURL=webpack://restaurant/./src/contactText.js?");
 
 /***/ }),
 
@@ -136,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Drawing_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Drawing.png */ \"./src/Drawing.png\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _taskBar_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./taskBar.js */ \"./src/taskBar.js\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\n\n\n\n\n\n\nlet screens = {homeScreen:_home_js__WEBPACK_IMPORTED_MODULE_3__.HomeScreen.getScreen(), menuScreen:_menu_js__WEBPACK_IMPORTED_MODULE_4__.MenuScreen.getScreen(), contactScreen:_contact_js__WEBPACK_IMPORTED_MODULE_5__.ContactScreen.getScreen()};\n\n\n\n\nconst Main = (function(){\n    const imageAppender = function() {\n        const leftImg = new Image();\n        const rightImg = new Image();\n        leftImg.src = _Drawing_png__WEBPACK_IMPORTED_MODULE_0__;\n        rightImg.src = _Drawing_png__WEBPACK_IMPORTED_MODULE_0__;\n        leftImg.id = 'left';\n        rightImg.id = 'right';\n        \n        mainDiv.append(leftImg, rightImg);\n    }\n\n    const mainDiv = document.getElementById('content');\n    mainDiv.appendChild(_taskBar_js__WEBPACK_IMPORTED_MODULE_2__.TaskBar.returnsTaskBar());\n    imageAppender();\n\n    _taskBar_js__WEBPACK_IMPORTED_MODULE_2__.TaskBar.swapScreen(mainDiv, screens.homeScreen);\n    let currentScreen = screens.homeScreen;\n    let prevScreen;\n\n\n\n    _taskBar_js__WEBPACK_IMPORTED_MODULE_2__.TaskBar.returnsTaskBar().childNodes.forEach(element => {\n        element.addEventListener('click', function(e){\n            prevScreen = currentScreen;\n            currentScreen = screens[`${e.target.id}`];\n            _taskBar_js__WEBPACK_IMPORTED_MODULE_2__.TaskBar.swapScreen(mainDiv,currentScreen,prevScreen);\n        });\n    });\n    \n})();\n\n//# sourceURL=webpack://restaurant/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Drawing_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Drawing.png */ \"./src/Drawing.png\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _taskBar_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./taskBar.js */ \"./src/taskBar.js\");\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\n\n\n\n\n\n\nlet screens = {homeScreen:_home_js__WEBPACK_IMPORTED_MODULE_3__.HomeScreen.getScreen(), menuScreen:_menu_js__WEBPACK_IMPORTED_MODULE_4__.MenuScreen.getScreen(), contactScreen:_contact_js__WEBPACK_IMPORTED_MODULE_5__.ContactScreen.getScreen()};\n\n\n\n\nconst Main = (function(){\n    const imageAppender = function() {\n        const leftImg = new Image();\n        const rightImg = new Image();\n        leftImg.src = _Drawing_png__WEBPACK_IMPORTED_MODULE_0__;\n        rightImg.src = _Drawing_png__WEBPACK_IMPORTED_MODULE_0__;\n        leftImg.id = 'left';\n        rightImg.id = 'right';\n        \n        mainDiv.append(leftImg, rightImg);\n\n        \n    }\n\n    const mainDiv = document.getElementById('content');\n    mainDiv.appendChild(_taskBar_js__WEBPACK_IMPORTED_MODULE_2__.TaskBar.returnsTaskBar());\n    imageAppender();\n\n    _taskBar_js__WEBPACK_IMPORTED_MODULE_2__.TaskBar.swapScreen(mainDiv, screens.homeScreen);\n    let currentScreen = screens.homeScreen;\n    let prevScreen;\n\n\n\n    _taskBar_js__WEBPACK_IMPORTED_MODULE_2__.TaskBar.returnsTaskBar().childNodes.forEach(element => {\n        element.addEventListener('click', function(e){\n            prevScreen = currentScreen;\n            currentScreen = screens[`${e.target.id}`];\n            _taskBar_js__WEBPACK_IMPORTED_MODULE_2__.TaskBar.swapScreen(mainDiv,currentScreen,prevScreen);\n        });\n    });\n\n})();\n\n//# sourceURL=webpack://restaurant/./src/index.js?");
 
 /***/ }),
 
@@ -146,7 +176,77 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Dra
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"MenuScreen\": () => (/* binding */ MenuScreen)\n/* harmony export */ });\nconst MenuScreen = (function(){\n    const getScreen = function(){\n        return screen;\n    }\n\n    //construction of the Menu screen\n    const screen = document.createElement('div');\n    screen.innerText = \"I'M FUCKIN MENUIN HERE!\";\n\n    return{getScreen}\n})();\n\n\n\n\n\n//# sourceURL=webpack://restaurant/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"MenuScreen\": () => (/* binding */ MenuScreen)\n/* harmony export */ });\n/* harmony import */ var _menuImages_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menuImages.js */ \"./src/menuImages.js\");\n/* harmony import */ var _menuText_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menuText.js */ \"./src/menuText.js\");\n\n\n\nconst MenuScreen = (function(){\n    let newDivs = [];\n\n    const getScreen = function(){\n        return screen;\n    }\n    \n    const pictureGetter = function(x){\n        let menuPicture = document.createElement('img');\n        menuPicture.src = _menuImages_js__WEBPACK_IMPORTED_MODULE_0__.default[`img${x}`];\n        menuPicture.style.height = '100px';\n        menuPicture.style.width = 'auto';\n        menuPicture.style.display = 'block';\n        menuPicture.classList.add(\"imageCenter\");\n        return menuPicture;\n    }\n    const textGetter = function(x){\n        let newText = _menuText_js__WEBPACK_IMPORTED_MODULE_1__.textList[`text${x}`];\n        return newText;\n    }\n    const pGetter = function(x){\n        const newP = document.createElement('p');\n        newP.innerText = textGetter(x);\n        return newP;\n    }\n    const divCustomizer = function(x){\n        newDivs[x] = document.createElement('div');\n        newDivs[x].id = `paragraph${x}`;\n        newDivs[x].classList.add('subBodyDiv');\n        return newDivs[x];\n    }\n\n\n\n    //construction of the Menu screen\n    const screen = document.createElement('div');\n    screen.classList.add(\"bodyDiv\");\n    for(let x = 0; x < 5; x++){\n        \n        newDivs[x] = divCustomizer(x);\n        let menuPicture = pictureGetter(x);\n        screen.appendChild(newDivs[x]);\n        newDivs[x].appendChild(menuPicture);\n        newDivs[x].appendChild(pGetter(x));\n    }\n    \n\n    return{getScreen}\n})();\n\n\n\n\n\n//# sourceURL=webpack://restaurant/./src/menu.js?");
+
+/***/ }),
+
+/***/ "./src/menuImages.js":
+/*!***************************!*\
+  !*** ./src/menuImages.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _menuImages_0_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menuImages/0.jpg */ \"./src/menuImages/0.jpg\");\n/* harmony import */ var _menuImages_1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menuImages/1.jpg */ \"./src/menuImages/1.jpg\");\n/* harmony import */ var _menuImages_2_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menuImages/2.jpg */ \"./src/menuImages/2.jpg\");\n/* harmony import */ var _menuImages_3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menuImages/3.jpg */ \"./src/menuImages/3.jpg\");\n/* harmony import */ var _menuImages_4_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menuImages/4.jpg */ \"./src/menuImages/4.jpg\");\n\n\n\n\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({\n    img0: _menuImages_0_jpg__WEBPACK_IMPORTED_MODULE_0__, img1: _menuImages_1_jpg__WEBPACK_IMPORTED_MODULE_1__, img2: _menuImages_2_jpg__WEBPACK_IMPORTED_MODULE_2__, img3: _menuImages_3_jpg__WEBPACK_IMPORTED_MODULE_3__, img4: _menuImages_4_jpg__WEBPACK_IMPORTED_MODULE_4__\n});\n\n//# sourceURL=webpack://restaurant/./src/menuImages.js?");
+
+/***/ }),
+
+/***/ "./src/menuImages/0.jpg":
+/*!******************************!*\
+  !*** ./src/menuImages/0.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"c8acbbd030e957c747ac.jpg\";\n\n//# sourceURL=webpack://restaurant/./src/menuImages/0.jpg?");
+
+/***/ }),
+
+/***/ "./src/menuImages/1.jpg":
+/*!******************************!*\
+  !*** ./src/menuImages/1.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"79d766e47629e9a4e644.jpg\";\n\n//# sourceURL=webpack://restaurant/./src/menuImages/1.jpg?");
+
+/***/ }),
+
+/***/ "./src/menuImages/2.jpg":
+/*!******************************!*\
+  !*** ./src/menuImages/2.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"1de0ffa25b8d6b3d04b5.jpg\";\n\n//# sourceURL=webpack://restaurant/./src/menuImages/2.jpg?");
+
+/***/ }),
+
+/***/ "./src/menuImages/3.jpg":
+/*!******************************!*\
+  !*** ./src/menuImages/3.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"b08a90bf3e627603cd6f.jpg\";\n\n//# sourceURL=webpack://restaurant/./src/menuImages/3.jpg?");
+
+/***/ }),
+
+/***/ "./src/menuImages/4.jpg":
+/*!******************************!*\
+  !*** ./src/menuImages/4.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"0af94d5b4bad34117dad.jpg\";\n\n//# sourceURL=webpack://restaurant/./src/menuImages/4.jpg?");
+
+/***/ }),
+
+/***/ "./src/menuText.js":
+/*!*************************!*\
+  !*** ./src/menuText.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"textList\": () => (/* binding */ textList)\n/* harmony export */ });\nlet textList= {\n    text0: \"A delicious boot burger, can't go wrong!\",\n    text1: 'Crisp, Cold, Refreshing Lemon Boots!',\n    text2: 'Meat Lovers deluxe burger boot. Bring your Appetite!',\n    text3: 'Chicken and waffles boot. Classic combination',\n    text4: 'treat yourself to the cherry pie high heel'\n};\n\n\n\n\n//# sourceURL=webpack://restaurant/./src/menuText.js?");
 
 /***/ }),
 
